@@ -1,0 +1,112 @@
+.header{
+  //max-height: 124px;
+  background-color: $primary_color;
+  &__wrap{
+    display: flex;
+    align-items: center;
+  }
+  &__logo{
+    height: 44px;
+    flex-shrink: 0;
+    img{
+      display: block;
+      width: 100%;
+      max-width: 148px;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+.form{
+  flex-grow: 1;
+  &__content, &__search-fild{
+    width: 100%;
+    background: inherit;
+    height: 100%;
+  }
+  &__content{
+    max-width: 492px;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__search-btn, &__search-sett{
+    height: 100%;
+    width: 24px;
+    background: none;
+    border: none;
+    img{
+      max-width: 24px;
+      max-height: 24px;
+    }
+  }
+  //&__search-btn{}
+  &__search-fild{
+    border: none;
+    outline: none;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+    color: #3D5278;
+    &::placeholder{
+      color: #3D5278;
+    }
+    &_hide-clear{
+      &::-webkit-search-cancel-button{
+        display: none;
+      }
+    }
+  }
+  //&__search-sett{}
+}
+.profil{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: calc(20px * 100% / 608px);
+  &__favorite-list, &__notifications,
+  &__settings, &__person{
+    flex-shrink: 0;
+    border-radius: 90px;
+    width: 44px;
+    height: 44px;
+  }
+  &__favorite-list, &__notifications, &__settings{
+    position: relative;
+    //width: 44px;
+    //height: 44px;
+    border: 1px solid #c3d4e966;
+    //border-radius: 90px;
+    //flex-shrink: 0;
+    svg{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      fill: #3D5278;
+    }
+  }
+  &__incoming-notif{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 11px;
+    height: 11px;
+    background: #FF4423;
+    border-radius: 50%;
+  }
+  &__person{
+    //max-width: 44px;
+    //max-height: 44px;
+    //border-radius: 90px;
+    overflow: hidden;
+    //flex-shrink: 0;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
