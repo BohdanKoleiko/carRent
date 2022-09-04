@@ -1,9 +1,8 @@
-@import './vendor/normalize';
+@import './base/reset';
 @import './base/variables';
 @import './base/fonts';
-@import './base/reset';
 
-[class$="__container"]{
+[class*="__container"]{
   max-width: 1396px;
   margin: 0 auto;
   padding: 0 20px;
@@ -18,13 +17,15 @@ html, body{
 body{
   display: flex;
   flex-direction: column;
-  background: #121316;
-  color: $white;
+  background: #E3E3E3;
 }
 
 @import './base/button';
 
-//Main BEM blocks
+// Main BEM blocks
 @import './header/header';
 @import './main/main';
 @import './footer/footer';
+
+// For adaptation
+@import './base/media';
