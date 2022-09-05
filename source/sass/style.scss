@@ -5,11 +5,10 @@
 [class*="__container"]{
   max-width: 1396px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 html, body{
-  height: 100%;
+  min-height: 100vh;
   font-family: 'Plus Jukarta Sans', sans-serif;
   font-weight: 400;
 }
@@ -20,12 +19,15 @@ body{
   background: #E3E3E3;
 }
 
+/* Aditional BEM blocks */
 @import './base/button';
+@import './base/logo';
 
-// Main BEM blocks
+
+/* Main BEM blocks */
 @import './header/header';
 @import './main/main';
 @import './footer/footer';
 
-// For adaptation
+/* For adaptation */
 @import './base/media';
