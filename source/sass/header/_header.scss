@@ -6,9 +6,9 @@
     align-items: center;
   }
   &__logo{
-    height: 44px;
+    height: 44px;     /* should delete in next feature fixes */
     flex-shrink: 0;
-    img{
+    img{              /* should delete in next feature fixes too */
       display: block;
       width: 100%;
       max-width: 148px;

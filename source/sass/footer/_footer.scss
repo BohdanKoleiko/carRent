@@ -1,0 +1,46 @@
+.footer{
+  &__wrap{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__goal{
+    width: 100%;
+    flex: 0 0 calc(100% / 2);
+    margin-right: 15px;
+  }
+  &__goal-txt{
+    margin: 0;
+    line-height: 200%;
+    /* or 24px */
+    letter-spacing: -0.01em;
+  }
+}
+.nav{
+  display: flex;
+  column-gap: calc(60px * 100% / 576px);
+  max-width: 576px;
+  width: 100%;
+  &__about, &__community, &__socials{
+    margin: 0;
+    padding: 0;
+    flex: 1 0 calc(100% / 3 - calc(60px * 100% / 576px));
+  }
+  &__about{
+    min-width: 142px;
+  }
+  &__heading-item{
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    /* or 24px */
+    color: #131313;
+  }
+  &__item{
+    line-height: 120%;
+    /* or 19px */
+    &:not(:last-child){
+      margin-bottom: 20px;
+    }
+  }
+}
