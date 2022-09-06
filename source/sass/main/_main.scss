@@ -1,3 +1,6 @@
 .main{
   flex: 1 1 auto;
+  background: $primary_color;
 }
+
+@import './aside/aside';
