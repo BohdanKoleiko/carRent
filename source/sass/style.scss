@@ -19,6 +19,12 @@ body{
   //background: #E3E3E3;
 }
 
+.content{
+  padding: 32px 0 32px 32px;
+  //background-color: $bg_color;
+  margin-left: 328px;
+}
+
 /* Aditional BEM blocks */
 @import './base/button';
 @import './base/logo';

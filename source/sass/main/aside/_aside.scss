@@ -1,7 +1,10 @@
 .aside{
-  width: 328px;
+  width: 348px;
   float: left;
   padding-top: 32px;
+  padding-left: 20px;
+  margin-left: -20px;
+  background: $primary_color;
 }
 .form-container{
   position: relative;
