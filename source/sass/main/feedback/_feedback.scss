@@ -1,0 +1,14 @@
+.feedback{
+  &__wrap{
+    padding: 24px;
+  }
+  &__title-wrap{}
+  &__title{}
+  &__num-feedback{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.02em;
+    color: #1A202C;
+  }
+}
