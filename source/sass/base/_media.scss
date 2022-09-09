@@ -1,6 +1,8 @@
 @media screen and (min-width: 320px) {
   [class*="__container"]{
+    max-width: 1395px;
     padding: 0 10px;
+    margin: 0 auto;
   }
 
   /* Header block */
@@ -73,6 +75,82 @@
     }
   }
 
+  /* Main block */
+  .aside{
+    display: none
+  }
+  .content{
+    width: 100%;
+    padding: 32px 0 32px 0;
+    overflow: hidden;
+  }
+  .recent-rent{
+    &__header{
+      margin: 0 0 20px;
+    }
+    &__caption{
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__more-products{
+      font-size: 12px;
+      line-height: 15px;
+    }
+    &__items{
+      flex-wrap: nowrap;
+    }
+    &__item{
+      padding: 16px;
+      max-width: 240px;
+      min-width: auto;
+    }
+    &__car-name{
+      font-size: 16px;
+      line-height: 20px;
+    }
+    &__car-type{
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      margin-bottom: 32px;
+    }
+    &__car-img{
+      height: 56px;
+      margin: 0 0 44px 0;
+    }
+    &__img-shadow{
+      bottom: -18px;
+    }
+    &__car-config{
+      margin-bottom: 28px;
+    }
+    &__car-price{
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: -0.01em;
+      span{
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+    &__btn{
+      --bs-btn-padding-y: 0.625rem;
+      --bs-btn-padding-x: 0.9375rem;
+      --bs-btn-font-size: 0.75rem;
+      --bs-btn-line-height: 0.9375rem;
+    }
+  }
+  .car-config{
+    &__gas, &__transmition, &__capacity{
+      font-size: 12px;
+      line-height: 15px;
+      column-gap: 4px;
+    }
+  }
+  .swiper{
+    overflow: hidden;
+  }
+
   /* Footer block */
   .footer{
     background: $bg_color;
@@ -128,6 +206,41 @@
     }
   }
 
+  /* Main block */
+  .recent-rent{
+    &__header{
+      margin: 0 10px 23px;
+    }
+    &__item{
+      padding: 18px;
+      max-width: 270px;
+    }
+    &__car-type{
+      margin-bottom: 40px;
+    }
+    &__car-img{
+      height: 65px;
+      margin: 0 0 46px 0;
+    }
+    &__car-config{
+      margin-bottom: 30px;
+    }
+    &__car-price{
+      font-size: 18px;
+      line-height: 22px;
+      span{
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+    &__btn{
+      --bs-btn-padding-y: 0.640rem;
+      --bs-btn-padding-x: 0.9675rem;
+      --bs-btn-font-size: 0.80rem;
+      --bs-btn-line-height: 0.9675rem;
+    }
+  }
+
   /* Footer block */
   .nav{
     &__socials{
@@ -141,6 +254,11 @@
 
 
 @media screen and (min-width: 768px) {
+  [class*="__container"]{
+    max-width: 1405px;
+    padding: 0 15px;
+  }
+
   /* Header block */
   .burger{
     display: none;
@@ -186,6 +304,42 @@
     }
   }
 
+  /* Main block */
+  .recent-rent{
+    &__header{
+      margin: 0 15px 23px;
+    }
+    &__item{
+      padding: 20px;
+      max-width: 290px;
+    }
+    &__car-name{
+      font-size: 18px;
+      line-height: 23px;
+    }
+    &__car-type{
+      font-weight: 600;
+      line-height: 16px;
+      margin-bottom: 45px;
+    }
+    &__car-img{
+      height: 70px;
+      margin: 0 0 48px 0;
+    }
+    &__img-shadow{
+      bottom: -22px;
+    }
+    &__car-config{
+      margin-bottom: 33px;
+    }
+    &__btn{
+      --bs-btn-padding-y: 0.660rem;
+      --bs-btn-padding-x: 1rem;
+      --bs-btn-font-size: 0.90rem;
+      --bs-btn-line-height: 1rem;
+    }
+  }
+
   /* Footer block */
   .footer{
     background-color: $primary_color;
@@ -210,6 +364,91 @@
 
 @media screen and (min-width: 1024px) {
   [class*="__container"]{
+    max-width: 1415px;
     padding: 0 20px;
+  }
+
+   /* Main block */
+  .aside{
+    display: block
+  }
+  .content{
+    width: calc(100% - calc(348px * 100% / 1375px) + 20px);
+    padding-left: 31px;
+  }
+  .recent-rent{
+    &__header{
+      margin: 0 20px 26px;
+    }
+    &__caption, &__more-products{
+      font-size: 16px;
+      line-height: 20px;
+    }
+    &__items{
+      flex-wrap: wrap;
+      column-gap: calc(32px * 100% / 1016px);
+      row-gap: 32px;
+    }
+    &__item{
+      padding: 24px;
+      max-width: 317px;
+      min-width: 288px;
+      flex: 1 1 calc(100% / 2 - 32px);
+    &:hover{
+      transform: scale(1.02);
+    }
+    }
+    &__car-name{
+      font-size: 20px;
+      line-height: 25px;
+    }
+    &__car-type{
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 52px;
+    }
+    &__car-img{
+      height: 84px;
+      margin: 0 0 52px 0;
+    }
+    &__img-shadow{
+      bottom: -24px;
+    }
+    &__car-config{
+      margin-bottom: 36px;
+    }
+    &__car-price{
+      font-size: 20px;
+      line-height: 25px;
+      span{
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+    &__btn{
+      --bs-btn-padding-y: 0.688rem;
+      --bs-btn-padding-x: 1.243rem;
+      --bs-btn-font-size: 1rem;
+      --bs-btn-line-height: 1.25rem;
+    }
+  }
+  .car-config{
+    &__gas, &__transmition, &__capacity{
+      font-size: 14px;
+      line-height: 18px;
+      column-gap: 8px;
+    }
+  }
+  .swiper{
+    overflow: visible;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .recent-rent{
+    &__item{
+      flex: 1 1 calc(100% / 3 - 32px);
+    }
   }
 }

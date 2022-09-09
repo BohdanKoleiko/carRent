@@ -1,6 +1,7 @@
 .aside{
-  width: 348px;
-  float: left;
+  width: calc(348px * 100% / 1375px);
+  min-width: 272px;
+  //min-height: 100%;
   padding-top: 32px;
   padding-left: 20px;
   margin-left: -20px;
@@ -9,6 +10,8 @@
 .form-container{
   position: relative;
   margin-bottom: 56px;
+  max-width: 296px;
+  margin-right: 20px;
   &__caption{
     font-weight: 600;
     font-size: 12px;
@@ -28,7 +31,7 @@
     top: 52px;
     left: 0;
     height: 8px;
-    width: 0px;
+    width: 0%;
     background: #3563E9;
     border-radius: 12px;
     z-index: 1;
@@ -76,6 +79,6 @@
 }
 .form-range{
   height: 20px;
-  width: 296px;
+  //width: 296px;
   margin-bottom: 12px;
 }
