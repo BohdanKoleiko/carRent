@@ -2,13 +2,8 @@
 @import './base/variables';
 @import './base/fonts';
 
-[class*="__container"]{
-  max-width: 1396px;
-  margin: 0 auto;
-}
-
 html, body{
-  min-height: 100vh;
+  height: 100%;
   font-family: 'Plus Jukarta Sans', sans-serif;
   font-weight: 400;
 }
@@ -16,13 +11,7 @@ html, body{
 body{
   display: flex;
   flex-direction: column;
-  //background: #E3E3E3;
-}
-
-.content{
-  padding: 32px 0 32px 32px;
-  //background-color: $bg_color;
-  margin-left: 328px;
+  min-height: 100%;
 }
 
 /* Aditional BEM blocks */
