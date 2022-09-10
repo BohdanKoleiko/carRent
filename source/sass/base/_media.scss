@@ -40,7 +40,11 @@
       order: 3;
       margin: 0;
       width: 100%;
+      flex-shrink: 0;
     }
+  }
+  .header__logo, .footer__logo{
+    max-width: 108px;
   }
   .form{
     display: flex;
@@ -49,7 +53,7 @@
     order: 4;
 
     height: 48px;
-    min-width: 300px;
+    min-width: 285px;
     max-width: 420px;
     margin: 0;
     &__content, &__search-sett{
@@ -68,7 +72,7 @@
     }
   }
   .profil{
-    width: auto;
+    width: calc(100% - 25px);
     order: 2;
     &__favorite-list, &__notifications, &__settings{
       display: none;
@@ -159,9 +163,9 @@
       row-gap: 48px;
       margin: 24px 0;
     }
-    &__logo{
-      max-width: 108px;
-    }
+    //&__logo{
+    //  max-width: 108px;
+    //}
     &__goal-txt{
       font-size: 12px;
       max-width: 216px;
@@ -190,11 +194,12 @@
 @media screen and (min-width: 425px) {
   /* Header block */
   .header{
-    &__wrap{
-      column-gap: calc(64px * 100% / 1376px);
-    }
+    //&__wrap{
+    //  column-gap: calc(64px * 100% / 1376px);
+    //}
     &__logo{
       width: auto;
+      margin-right: 10px;
     }
   }
   .profil, .burger{
@@ -265,14 +270,17 @@
   }
   .header{
     &__wrap{
-      row-gap: 0;
       flex-wrap: nowrap;
-      margin: 40px 0;
+      row-gap: 0;
+      column-gap: calc(30px * 100% / 1376px);
+      margin: 40px 0 40px 28px;
     }
     &__logo{
       order: 1;
-      width: 148px;
     }
+  }
+  .header__logo, .footer__logo{
+    max-width: 148px;
   }
   .form{
     height: 44px;
@@ -296,8 +304,10 @@
       flex: 0 0 auto;
     }
   }
+  
   .profil{
     order: 3;
+    width: auto;
     flex: 1 1 auto;
     &__favorite-list, &__notifications, &__settings{
       display: block;
@@ -357,9 +367,9 @@
       row-gap: 0;
       margin: 80px 0 60px 0;
     }
-    &__logo{
-      max-width: 148px;
-    }
+    //&__logo{
+    //  max-width: 148px;
+    //}
     &__goal-txt{
       font-size: 16px;
       max-width: 292px;
@@ -375,6 +385,13 @@
   [class*="__container"]{
     max-width: 1415px;
     padding: 0 20px;
+  }
+
+  /* Header block */
+  .header{
+    &__wrap{
+      column-gap: calc(64px * 100% / 1376px);
+    }
   }
 
    /* Main block */
@@ -403,9 +420,9 @@
       max-width: 317px;
       min-width: 281px;
       //flex: 1 1 calc(100% / 3 - 32px);
-    &:hover{
-      transform: scale(1.02);
-    }
+      &:hover{
+        transform: scale(1.02);
+      }
     }
     &__car-name{
       font-size: 20px;
