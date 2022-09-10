@@ -1,4 +1,4 @@
-.recent-rent{
+.recom-car{
   margin-bottom: 32px;
   &__header{
     display: flex;
@@ -15,7 +15,6 @@
   &__more-products{
     color: #3563E9;
   }
-  //&__items{}
   &__item{
     position: relative;
     width: 100%;
@@ -51,9 +50,6 @@
     height: 66px;
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
   }
-  //&__car-config{
-  //  margin-bottom: 36px;
-  //}
   &__bottom-wrap{
     display: flex;
     justify-content: space-between;
