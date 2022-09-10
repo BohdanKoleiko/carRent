@@ -26,30 +26,32 @@ collapseBtn.addEventListener('click', () => {
 const checkSwiper = document.querySelector('.swiper');
 
 if(checkSwiper){
-  const swiper = new Swiper('.swiper', {
+  new Swiper('.swiper', {
     direction: "horizontal",
     loop: false,
+    observer: true,
+    observeSlideChildren: true,
     slidesPerView: "auto",
     resistanceRatio: 0.6,
     grabCursor: true,
+    preloadImages: false,
+    slidesOffsetAfter: 38,
     breakpoints: {
       // when window width is >= 1024px
       320: {
         enabled: true,
-        spaceBetween: 19,
-        setWrapperSize: true,
+        centeredSlides: true,
+        centeredSlidesBounds: true,
+      },
+      576: {
         centeredSlides: true,
         centeredSlidesBounds: true,
       },
       768: {
-        spaceBetween: 25,
-        setWrapperSize: false,
+        enabled: false,
+        slidesOffsetAfter: 0,
         centeredSlides: false,
       },
-      1024: {
-        enabled: false,
-        spaceBetween: 0,
-      }
     },
   });
 }
