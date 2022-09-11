@@ -1,13 +1,11 @@
 .feedback{
   background: $primary_color;
   border-radius: 10px;
-  margin-bottom: 32px;
   &__wrap{
     padding: 24px;
   }
   &__title-wrap{
     text-align: left;
-    height: 28px;
     margin-bottom: 32px;
   }
   &__title{
@@ -22,8 +20,8 @@
   &__num-feedback{
     display: inline-block;
     background: $blue_color;
-    max-width: 44px;
-    max-height: 28px;
+    width: 44px;
+    height: 28px;
     border-radius: 4px;
     text-align: center;
     padding: 6px 15px;
@@ -42,34 +40,12 @@
   &__customer-feedback{
     margin-bottom: 24px;
   }
-  &__collapse-btn{
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    color: #90A3BF;
-    svg{
-      vertical-align: unset;
-      transform: rotateX(180deg);
-      transition: transform 0.4s ease-in-out;
-    }
-  }
-  .collapsed{
-    svg{
-      transform: rotate(0deg);
-    }
-  }
-  //&__collapse-group{}
   &__heading-wrap{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 16px;
-    margin-bottom: 12px;
   }
   &__client-img{
-    width: 56px;
-    height: 56px;
     border-radius: 100%;
     img{
       width: 100%;
@@ -80,16 +56,11 @@
     flex: 1 1 auto;
   }
   &__client-name{
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 25px;
     color: #1A202C;
     margin-bottom: 8px;
   }
   &__client-position,  &__data{
     font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
     color: #90A3BF;
   }
   &__data{
@@ -109,15 +80,30 @@
     }
   }
   &__txt{
-    padding-left: 72px;
     p{
       font-weight: 400;
-      font-size: 14px;
       line-height: 200%;
       /* or 28px */
       letter-spacing: -0.02em;
       color: #3D5278;
       margin: 0;
+    }
+  }
+  &__collapse-btn{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #90A3BF;
+    svg{
+      vertical-align: unset;
+      transform: rotateX(180deg);
+      transition: transform 0.4s ease-in-out;
+    }
+  }
+  .collapsed{
+    svg{
+      transform: rotate(0deg);
     }
   }
 }
