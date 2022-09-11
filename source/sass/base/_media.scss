@@ -105,11 +105,9 @@
     }
     &__sub-title{
       font-size: 12px;
-      //margin-bottom: 0;
     }
   }
   .car{
-    //height: 320px;
     width: 100%;
     &__carousel{
       height: 232px;
@@ -310,14 +308,14 @@
     &__wrap{
       flex-direction: column;
       row-gap: 48px;
-      margin: 24px 0;
+      margin: 24px 0 48px 0;
     }
-    //&__logo{
-    //  max-width: 108px;
-    //}
     &__goal-txt{
       font-size: 12px;
       max-width: 216px;
+    }
+    &__devider{
+      display: none;
     }
   }
   .nav{
@@ -337,15 +335,22 @@
     font-weight: 500;
     color: #90A3BF;
   }
+  .rights{
+    flex-wrap: wrap;
+    row-gap: 32px;
+    column-gap: 10px;
+    font-size: 12px;
+    margin-bottom: 24px;
+    &__right-res{order: 3; flex-grow: 0;}
+    &__priv-poli{order: 1;}
+    &__term-cond{order: 2;}
+  }
 }
 
 
 @media screen and (min-width: 425px) {
   /* Header block */
   .header{
-    //&__wrap{
-    //  column-gap: calc(64px * 100% / 1376px);
-    //}
     &__logo{
       width: auto;
       margin-right: 10px;
@@ -402,32 +407,16 @@
   }
   /* Feedback section of Main block */
   .feedback{
-    //&__wrap{
-    //  padding: 16px;
-    //}
-    //&__title-wrap{
-    //  margin-bottom: 24px;
-    //}
-    //&__customer-feedback{
-    //  margin-bottom: 20px;
-    //}
     &__heading-wrap{
-      //margin-bottom: 16px;
       column-gap: 12px;
     }
     &__client-img{
       width: 50px;
-      //height: auto;
     }
     &__client-name{
-      //font-weight: 600;
-      //font-size: 16px;
-      //line-height: 20px;
       letter-spacing: normal;
     }
     &__client-position,  &__data{
-      //font-size: 12px;
-      //line-height: 15px;
       letter-spacing: normal;
     }
     &__client-rate{
@@ -464,14 +453,6 @@
     &__car-config{
       margin-bottom: 30px;
     }
-    //&__car-price{
-    //  font-size: 18px;
-    //  line-height: 22px;
-    //  span{
-    //    font-size: 12px;
-    //    line-height: 15px;
-    //  }
-    //}
     &__btn{
       --bs-btn-padding-y: 0.640rem;
       --bs-btn-padding-x: 0.9675rem;
@@ -489,6 +470,13 @@
     &__community{
       order: 2;
     }
+  }
+  .rights{
+    margin-bottom: 40px;
+    font-size: 14px;
+    column-gap: 20px;
+    &__term-cond, &__priv-poli{flex-basis: calc(100% / 2 - 20px);}
+    &__term-cond{text-align: right;}
   }
 }
 
@@ -561,10 +549,8 @@
   }
   .about-car{
     padding: 20px;
-    //min-width: 300px;
     &__heading{
       font-size: 24px;
-      //margin-bottom: 6px;
     }
     &__rate, &__txt{
       margin-bottom: 20px;
@@ -597,16 +583,10 @@
       font-size: 14px;
       line-height: 16px;
     }
-    //&__button{
-    //  --bs-btn-padding-y: 1rem;
-    //  --bs-btn-padding-x: 2rem;
-    //}
   }
   .config{
     &__spec-item{
-      //font-weight: 500;
       font-size: 14px;
-      //line-height: 15px;
       letter-spacing: -0.02em;
       max-width: 135px;
     }
@@ -620,9 +600,6 @@
     &__title-wrap{
       margin-bottom: 28px;
     }
-    //&__customer-feedback{
-    //  margin-bottom: 20px;
-    //}
     &__heading-wrap{
       margin-bottom: 12px;
       column-gap: 16px;
@@ -707,18 +684,31 @@
     &__wrap{
       flex-direction: row;
       row-gap: 0;
-      margin: 80px 0 60px 0;
+      margin: 80px 28px 60px;
     }
-    //&__logo{
-    //  max-width: 148px;
-    //}
     &__goal-txt{
       font-size: 16px;
       max-width: 292px;
     }
+    &__devider{
+      display: block;
+      margin: 0 28px 48px 28px;
+    }
   }
   .footer__goal-txt, .nav__item{
     color: #13131399;
+  }
+  .rights{
+    flex-wrap: nowrap;
+    column-gap: 60px;
+    font-size: 16px;
+    margin-left: 28px;
+    margin-right: 28px;
+    &__right-res{order: 1; flex-grow: 1;}
+    &__priv-poli{order: 2;}
+    &__term-cond{order: 3;}
+    &__term-cond, &__priv-poli{flex-basis: auto;}
+    &__term-cond{text-align: left;}
   }
 }
 
@@ -754,9 +744,6 @@
       height: 124px;
     }
     &__item{
-      //&[data-bs-target]{
-      //  width: 148px;
-      //}
       &[class*="active"]{
         padding: 8px; 
       }
@@ -826,7 +813,6 @@
       line-height: 20px;
     }
     &__items{
-      //flex-wrap: wrap;
       column-gap: calc(32px * 100% / 1016px);
       row-gap: 32px;
     }
@@ -834,7 +820,6 @@
       padding: 24px;
       max-width: 317px;
       min-width: 281px;
-      //flex: 1 1 calc(100% / 3 - 32px);
       &:hover{
         transform: scale(1.02);
       }
@@ -883,6 +868,11 @@
   }
   .swiper{
     overflow: visible;
+  }
+
+  /* Footer block */
+  .rights{
+    margin-bottom: 60px;
   }
 }
 
