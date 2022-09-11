@@ -82,7 +82,7 @@
 
   /* MAIN BLOCK */
   .aside{
-    display: none
+    display: none;
   }
   .content{
     width: 100%;
@@ -728,7 +728,14 @@
 
   /* MAIN BLOCK */
   .aside{
+    min-width: 250px;
     display: block
+  }
+  .form-check-label{
+    font-size: 18px;
+  }
+  .form-check:not(:last-child){
+    margin-bottom: 26px;
   }
   .content{
     width: calc(100% - calc(348px * 100% / 1375px) + 20px);
@@ -878,6 +885,12 @@
 
 @media screen and (min-width: 1200px) {
   /* MAIN BLOCK */
+  .form-check-label{
+    font-size: 20px;
+  }
+  .form-check:not(:last-child){
+    margin-bottom: 32px;
+  }
   /* Promo section of Main block */
   .about-car{
     padding: 24px 24px 32px 24px;
