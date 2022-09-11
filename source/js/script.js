@@ -29,8 +29,6 @@ if(checkSwiper){
   new Swiper('.swiper', {
     direction: "horizontal",
     loop: false,
-    observer: true,
-    observeSlideChildren: true,
     slidesPerView: "auto",
     resistanceRatio: 0.6,
     grabCursor: true,

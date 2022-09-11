@@ -186,6 +186,9 @@
   }
   /* Recent-rent and Recom-car sections of Main block */
   .recent-rent, .recom-car{
+    max-width: 480px;
+    margin: 0 auto;
+    margin-bottom: 32px;
     &__header{
       margin: 0 0 20px;
     }
@@ -250,6 +253,7 @@
   }
   .swiper{
     overflow: hidden;
+    border-radius: 10px;
   }
   /* Feedback section of Main block */
   .feedback{
@@ -654,12 +658,10 @@
   }
   /* Recent-rent and Recom-car sections of Main block */
   .recent-rent, .recom-car{
+    max-width: 100%;
     &__header{
       margin: 0 15px 23px;
     }
-    //&__items{
-    //  column-gap: 25px;
-    //}
     &__items{
       flex-wrap: wrap;
       column-gap: calc(25px * 100% / 1016px);
@@ -689,12 +691,14 @@
     &__car-config{
       margin-bottom: 33px;
     }
-    //&__btn{
-    //  --bs-btn-padding-y: 0.660rem;
-    //  --bs-btn-padding-x: 1rem;
-    //  --bs-btn-font-size: 0.90rem;
-    //  --bs-btn-line-height: 1rem;
-    //}
+  }
+  .car-config{
+    &__gas, &__transmition, &__capacity{
+      column-gap: 0px;
+    }
+  }
+  .swiper{
+    border-radius: 0;
   }
 
   /* Footer block */
@@ -802,6 +806,9 @@
     }
   }
   .config{
+    &__gas, &__transmition, &__capacity{
+      column-gap: 4px;
+    }
     &__spec-item{
       font-size: 16px;
       line-height: 20px;
