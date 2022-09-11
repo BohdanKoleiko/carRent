@@ -79,7 +79,8 @@
     }
   }
 
-  /* Main block */
+
+  /* MAIN BLOCK */
   .aside{
     display: none
   }
@@ -88,7 +89,7 @@
     padding: 32px 0 32px 0;
     overflow: hidden;
   }
-
+  /* Promo section of Main block */
   .promo{
     &__wrap{
       flex-direction: column;
@@ -183,7 +184,7 @@
       max-width: 124px;
     }
   }
-
+  /* Recent-rent and Recom-car sections of Main block */
   .recent-rent, .recom-car{
     &__header{
       margin: 0 0 20px;
@@ -250,6 +251,54 @@
   .swiper{
     overflow: hidden;
   }
+  /* Feedback section of Main block */
+  .feedback{
+    max-width: 480px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    &__wrap{
+      padding: 16px;
+    }
+    &__title-wrap{
+      margin-bottom: 24px;
+    }
+    &__customer-feedback{
+      margin-bottom: 20px;
+    }
+    &__heading-wrap{
+      margin-bottom: 16px;
+      column-gap: 8px;
+    }
+    &__client-img{
+      width: 44px;
+      height: auto;
+    }
+    &__client-name{
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: -0.01em;
+    }
+    &__client-position,  &__data{
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: -0.01em;
+    }
+    &__client-rate{
+      svg{
+        height: auto;
+        width: 12px;
+      }
+    }
+    &__txt{
+      padding-left: 52px;
+      p{
+        height: 50px;
+        font-size: 12px;
+      }
+    }
+  }
+
 
   /* Footer block */
   .footer{
@@ -307,7 +356,9 @@
     }
   }
 
-  /* Main block */
+
+  /* MAIN BLOCK */
+  /* Promo section of Main block */
   .promo{
     &__wrap{
       column-gap: calc(20px * 100% / 1016px);
@@ -343,9 +394,54 @@
   }
   .about-car, .car{
     flex: 1 1 calc(100% / 2 - (calc(20px * 100% / 1016px)));
-    max-width: 450px;
+    max-width: 480px;
   }
-
+  /* Feedback section of Main block */
+  .feedback{
+    //&__wrap{
+    //  padding: 16px;
+    //}
+    //&__title-wrap{
+    //  margin-bottom: 24px;
+    //}
+    //&__customer-feedback{
+    //  margin-bottom: 20px;
+    //}
+    &__heading-wrap{
+      //margin-bottom: 16px;
+      column-gap: 12px;
+    }
+    &__client-img{
+      width: 50px;
+      //height: auto;
+    }
+    &__client-name{
+      //font-weight: 600;
+      //font-size: 16px;
+      //line-height: 20px;
+      letter-spacing: normal;
+    }
+    &__client-position,  &__data{
+      //font-size: 12px;
+      //line-height: 15px;
+      letter-spacing: normal;
+    }
+    &__client-rate{
+      svg{
+        height: auto;
+        width: 14px;
+      }
+    }
+    &__txt{
+      padding-left: 60px;
+      p{
+        height: 72px;
+        font-size: 12px;
+        overflow: hidden;
+      }
+    }
+  }
+  /* Recent-rent and Recom-car sections of Main block */
   .recent-rent, .recom-car{
     &__header{
       margin: 0 10px 23px;
@@ -379,6 +475,7 @@
       --bs-btn-line-height: 0.9675rem;
     }
   }
+
 
   /* Footer block */
   .nav{
@@ -448,7 +545,8 @@
     }
   }
 
-  /* Main block */
+  /* MAIN BLOCK */
+  /* Promo section of Main block */
   .promo{
     &__wrap{
       flex-direction: row;
@@ -509,7 +607,52 @@
       max-width: 135px;
     }
   }
-
+  /* Feedback section of Main block */
+  .feedback{
+    max-width: 100%;
+    &__wrap{
+      padding: 20px;
+    }
+    &__title-wrap{
+      margin-bottom: 28px;
+    }
+    //&__customer-feedback{
+    //  margin-bottom: 20px;
+    //}
+    &__heading-wrap{
+      margin-bottom: 12px;
+      column-gap: 16px;
+    }
+    &__client-img{
+      width: 56px;
+    }
+    &__client-name{
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 25px;
+      letter-spacing: normal;
+    }
+    &__client-position,  &__data{
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: normal;
+    }
+    &__client-rate{
+      svg{
+        height: auto;
+        width: 20px;
+      }
+    }
+    &__txt{
+      padding-left: 72px;
+      p{
+        height: 100%;
+        font-size: 14px;
+        overflow: hidden;
+      }
+    }
+  }
+  /* Recent-rent and Recom-car sections of Main block */
   .recent-rent, .recom-car{
     &__header{
       margin: 0 15px 23px;
@@ -589,7 +732,7 @@
     }
   }
 
-   /* Main block */
+  /* MAIN BLOCK */
   .aside{
     display: block
   }
@@ -597,6 +740,7 @@
     width: calc(100% - calc(348px * 100% / 1375px) + 20px);
     padding-left: 31px;
   }
+  /* Promo section of Main block */
   .car{
     &__carousel{
       height: 100%;
@@ -665,7 +809,7 @@
       max-width: 148px;
     }
   }
-
+  /* Recent-rent and Recom-car sections of Main block */
   .recent-rent, .recom-car{
     &__header{
       margin: 0 20px 26px;
@@ -736,7 +880,8 @@
 }
 
 @media screen and (min-width: 1200px) {
-  /* Main block */
+  /* MAIN BLOCK */
+  /* Promo section of Main block */
   .about-car{
     padding: 24px 24px 32px 24px;
     min-width: 376px;
