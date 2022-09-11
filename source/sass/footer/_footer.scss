@@ -14,6 +14,10 @@
     /* or 24px */
     letter-spacing: -0.01em;
   }
+  &__devider{
+    max-width: 100%;
+    border-top: 1px solid rgba(19, 19, 19, 0.16);
+  }
 }
 .nav{
   display: flex;
@@ -43,4 +47,14 @@
       margin-bottom: 20px;
     }
   }
+}
+.rights{
+  display: flex;
+  justify-content: space-between;
+
+  font-weight: 600;
+  line-height: 200%;
+  /* identical to box height, or 32px */
+  letter-spacing: -0.01em;
+  color: #131313;
 }
