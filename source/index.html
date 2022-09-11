@@ -171,7 +171,7 @@
           <section class="promo">
             <div class="promo__wrap">  <!-- This is wrapper of all section with car and descr to one -->
               <div class="car">  <!-- This is block for car`s photos -->
-                <div class="car__carousel carousel slide" data-bs-ride="carousel">
+                <div class="car__carousel carousel slide" data-bs-ride="carousel" data-bs-interval="10000" id="test">
                   <div class="car__img-box carousel-fade">
     
                     <figure class="car__intro carousel-item active">
@@ -193,14 +193,14 @@
                   </div>
                 </div>
     
-                <div class="car__items">
-                  <div class="car__item" data-bs-target="#carouselExampleIndicators">
+                <div class="car__items carousel-indicators">
+                  <div class="car__item" data-bs-target="#test" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">
                     <img src="./images/cars/little_nissan.png" alt="little images of Nissan GT-R">
                   </div>
-                  <div class="car__item">
+                  <div class="car__item" data-bs-target="#test" data-bs-slide-to="1" aria-label="Slide 2">
                     <img src="./images/cars/interior_1.png" alt="images of Nissan interior">
                   </div>
-                  <div class="car__item">
+                  <div class="car__item" data-bs-target="#test" data-bs-slide-to="2" aria-label="Slide 3">
                     <img src="./images/cars/interior_2.png" alt="images of Nissan interior">
                   </div>
                 </div>

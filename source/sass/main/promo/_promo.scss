@@ -1,15 +1,9 @@
 .promo{
-  //margin-left: 328px;
-  //margin-right: -20px;
-  //padding: 32px 0 32px 32px;
-  //background-color: $bg_color;
-  //height: 100%;
   margin-bottom: 32px;
   &__wrap{
     display: flex;
     flex-wrap: wrap;
     column-gap: calc(32px * 100% / 1016px);
-
   }
   &__title-wrap{
     position: absolute;
@@ -36,18 +30,14 @@
     letter-spacing: 0.02em;
     color: $primary_color;
     max-width: 284px;
-    margin-bottom: 48px;
+    //margin-bottom: 48px;
   }
   
 }
 
 .car{
-  //position: relative;
-  //width: 495px;
-  height: 508px;
-  //flex: 1 1 calc(100% / 2 - 32px);
+  max-height: 508px;
   &__carousel{
-    //width: 495px;
     height: 360px;
     margin: 0 auto;
     margin-bottom: 24px;
@@ -62,16 +52,18 @@
   }
   &__intro{
     position: relative;
-    background: #3563E9 url('../../../images/bg.png') center center/contain no-repeat;
+    background: #3563E9 url('../../../images/bg.png') 100% center/cover no-repeat;
     width: 100%;
     height: 100%;
     img{
       position: absolute;
-      top: 216px;
+      bottom: 24px;
       left: 50%;
       transform: translateX(-50%);
-      width: 380px;
-      height: 120px;
+      width: calc(380px * 100% / 492px);
+      max-width: 380px;
+      height: auto;
+      max-height: 120px;
       margin: 0 auto;
     }
   }
@@ -82,47 +74,56 @@
     img{
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: fill;
     }
   }
   &__items{
     width: 100%;
-    height: 124px;
 
     display: flex;
     justify-content: space-between;
     column-gap: calc(24px * 100% / 492px);
+
+    //It`s disable styles that come from bootstrap
+    position: static;
+    margin: 0;
   }
   &__item{
-    width: 148px;
-    height: auto;
-    border-radius: 8px;
-    transition: all 0.2s ease-in-out;
-    &_active{
-      border: 2px solid #3563E9;
-      padding: 8px;
-    }
+    overflow: hidden;
     img{
+      border-radius: 10px;
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
-    &:hover{
+    //It`s disable styles that come from bootstrap
+    &[data-bs-target]{
+      height: auto;
+      margin: 0;
+      text-indent: 0;
+      background: none;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      transition: all 0.3s ease-in-out;
+      box-sizing: border-box;
+      opacity: 1;
+      &:hover{
+        border: 2px solid #3563E9;
+        padding: 8px;
+      }
+    }
+    &[class*="active"]{
       border: 2px solid #3563E9;
-      padding: 8px;
     }
+  }
+  .carousel{
+    position: static;
   }
 }
 
 .about-car{
-  //flex: 1 1 calc(100% / 2 - 32px);
   background-color: $primary_color;
-  //position: relative;
-  padding: 24px 24px 32px 24px;
-  min-width: 376px;
-  //max-width: 800px;
   &__button{
-    --bs-btn-padding-y: 0.938rem;
-    --bs-btn-padding-x: 2.05rem;
     --bs-btn-font-weight: 700;
     --bs-btn-font-size: 16px;
     --bs-btn-line-height: 20px;
@@ -130,17 +131,14 @@
   }
   &__heading{
     font-weight: 700;
-    font-size: 32px;
     line-height: 140%;
     /* or 45px */
     color: #1A202C;
-    margin-bottom: 8px;
   }
   &__rate{
     display: flex;
     max-height: 24px;
     column-gap: calc(8px * 100% / 441px);
-    margin-bottom: 32px;
   }
   &__rate-items{
     svg{
@@ -154,8 +152,6 @@
   }
   &__num-reviews{
     font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
     letter-spacing: 0.02em;
     color: #3D5278;
   }
@@ -166,29 +162,22 @@
   }
   &__txt{
     font-weight: 400;
-    font-size: 20px;
     line-height: 200%;
     /* or 40px */
     letter-spacing: -0.02em;
     color: #3D5278;
-    margin-bottom: 32px;
   }
-  &__config{
-    margin-bottom: 68px;
-  }
+  //&__config{}
   &__rent{
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   &__price{
     font-weight: 700;
-    font-size: 28px;
-    line-height: 35px;
     color: #1A202C;
   }
   &__price-sale, &__price span{
-    font-size: 16px;
-    line-height: 20px;
     color: #90A3BF;
   }
   &__price-sale{
@@ -197,9 +186,7 @@
 }
 
 .car, .about-car{
-  flex: 1 1 calc(100% / 2 - 32px);
   position: relative;
-  max-width: 800px;
 }
 
 .favourite{
@@ -221,12 +208,7 @@
   }
   &__spec-item{
     flex: 1 1 auto;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 25px;
-    letter-spacing: -0.02em;
     color: #90A3BF;
-    max-width: 200px;
 
     display: flex;
     justify-content: space-between;

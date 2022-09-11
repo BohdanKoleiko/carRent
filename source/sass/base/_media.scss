@@ -88,6 +88,102 @@
     padding: 32px 0 32px 0;
     overflow: hidden;
   }
+
+  .promo{
+    &__wrap{
+      flex-direction: column;
+      align-items: center;
+      row-gap: 32px;
+    }
+    &__title-wrap{
+      padding: 16px 0 0 16px;
+    }
+    &__title{
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+    &__sub-title{
+      font-size: 12px;
+      //margin-bottom: 0;
+    }
+  }
+  .car{
+    //height: 320px;
+    width: 100%;
+    &__carousel{
+      height: 232px;
+    }
+    &__items{
+      height: 64px;
+    }
+    &__item{
+      &[data-bs-target]{
+        flex: 1 1 calc(100% / 3);
+      }
+      &[class*="active"]{
+        padding: 3px; 
+      }
+    }
+    &__intro{
+      img{
+        bottom: 20px;
+      }
+    }
+  }
+  .about-car{
+    padding: 16px;
+    min-width: 300px;
+    &__heading{
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+    &__rate, &__txt{
+      margin-bottom: 16px;
+    }
+    &__rate-items{
+      svg{
+        width: 12px;
+        height: 12px;
+      }
+    }
+    &__num-reviews{
+      font-size: 12px;
+      line-height: 15px;
+    }
+    &__txt{
+      font-size: 12px;
+    }
+    &__config{
+      margin-bottom: 32px;
+    }
+    &__price{
+      font-size: 20px;
+      line-height: 25px;
+      span{
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+    &__price-sale{
+      font-size: 12px;
+      line-height: 15px;
+      margin-top: 4px;
+    }
+    &__button{
+      --bs-btn-padding-y: 1rem;
+      --bs-btn-padding-x: 2rem;
+    }
+  }
+  .config{
+    &__spec-item{
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: -0.01em;
+      max-width: 124px;
+    }
+  }
+
   .recent-rent, .recom-car{
     &__header{
       margin: 0 0 20px;
@@ -212,6 +308,44 @@
   }
 
   /* Main block */
+  .promo{
+    &__wrap{
+      column-gap: calc(20px * 100% / 1016px);
+    }
+    &__title-wrap{
+      padding: 16px 0 0 16px;
+    }
+    &__title{
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+    &__sub-title{
+      font-size: 12px;
+    }
+  }
+  .car{
+    &__carousel{
+      height: 280px;
+    }
+    &__items{
+      height: 64px;
+    }
+    &__item{
+      &[class*="active"]{
+        padding: 4px; 
+      }
+    }
+    &__intro{
+      img{
+        bottom: 20px;
+      }
+    }
+  }
+  .about-car, .car{
+    flex: 1 1 calc(100% / 2 - (calc(20px * 100% / 1016px)));
+    max-width: 450px;
+  }
+
   .recent-rent, .recom-car{
     &__header{
       margin: 0 10px 23px;
@@ -315,6 +449,67 @@
   }
 
   /* Main block */
+  .promo{
+    &__wrap{
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: unset;
+    }
+  }
+  .about-car{
+    padding: 20px;
+    //min-width: 300px;
+    &__heading{
+      font-size: 24px;
+      //margin-bottom: 6px;
+    }
+    &__rate, &__txt{
+      margin-bottom: 20px;
+    }
+    &__rate-items{
+      svg{
+        width: 16px;
+        height: 16px;
+      }
+    }
+    &__num-reviews{
+      font-size: 12px;
+      line-height: 15px;
+    }
+    &__txt{
+      font-size: 14px;
+    }
+    &__config{
+      margin-bottom: 42px;
+    }
+    &__price{
+      font-size: 22px;
+      line-height: 28px;
+      span{
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+    &__price-sale{
+      font-size: 14px;
+      line-height: 16px;
+    }
+    //&__button{
+    //  --bs-btn-padding-y: 1rem;
+    //  --bs-btn-padding-x: 2rem;
+    //}
+  }
+  .config{
+    &__spec-item{
+      //font-weight: 500;
+      font-size: 14px;
+      //line-height: 15px;
+      letter-spacing: -0.02em;
+      max-width: 135px;
+    }
+  }
+
   .recent-rent, .recom-car{
     &__header{
       margin: 0 15px 23px;
@@ -402,6 +597,75 @@
     width: calc(100% - calc(348px * 100% / 1375px) + 20px);
     padding-left: 31px;
   }
+  .car{
+    &__carousel{
+      height: 100%;
+      max-height: 360px;
+    }
+    &__items{
+      height: 124px;
+    }
+    &__item{
+      //&[data-bs-target]{
+      //  width: 148px;
+      //}
+      &[class*="active"]{
+        padding: 8px; 
+      }
+    }
+  }
+  .car, .about-car{
+    flex: 1 1 calc(100% / 2 - 32px);
+    max-width: 800px;
+  }
+  .about-car{
+    padding: 20px 20px 32px 20px;
+    min-width: 350px;
+    &__heading{
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+    &__rate, &__txt{
+      margin-bottom: 28px;
+    }
+    &__rate-items{
+      svg{
+        width: 20px;
+        height: 20px;
+      }
+    }
+    &__num-reviews{
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__txt{
+      font-size: 18px;
+    }
+    &__config{
+      margin-bottom: 68px;
+    }
+    &__price{
+      font-size: 28px;
+      line-height: 35px;
+    }
+    &__price-sale, &__price span{
+      font-size: 16px;
+      line-height: 20px;
+    }
+    &__button{
+      --bs-btn-padding-y: 0.938rem;
+      --bs-btn-padding-x: 2.05rem;
+    }
+  }
+  .config{
+    &__spec-item{
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: -0.02em;
+      max-width: 148px;
+    }
+  }
+
   .recent-rent, .recom-car{
     &__header{
       margin: 0 20px 26px;
@@ -473,17 +737,53 @@
 
 @media screen and (min-width: 1200px) {
   /* Main block */
-  //.recent-rent, .recom-car{
-    //&__item{
-      //min-width: 281px;
-      //flex: 1 1 auto;
-    //}
-    //&__btn{
-    //  //flex: 0 1 50%;
-    //  --bs-btn-padding-y: 0.688rem;
-    //  --bs-btn-padding-x: 1.243rem;
-    //  --bs-btn-font-size: 1rem;
-    //  --bs-btn-line-height: 1.25rem;
-    //}
-  //}
+  .about-car{
+    padding: 24px 24px 32px 24px;
+    min-width: 376px;
+    &__heading{
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+    &__rate{
+      margin-bottom: 32px;
+    }
+    &__rate-items{
+      svg{
+        width: 20px;
+        height: 20px;
+      }
+    }
+    &__num-reviews{
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__txt{
+      font-size: 20px;
+      margin-bottom: 32px;
+    }
+    &__config{
+      margin-bottom: 68px;
+    }
+    &__price{
+      font-size: 28px;
+      line-height: 35px;
+    }
+    &__price-sale, &__price span{
+      font-size: 16px;
+      line-height: 20px;
+    }
+    &__button{
+      --bs-btn-padding-y: 0.938rem;
+      --bs-btn-padding-x: 2.05rem;
+    }
+  }
+  .config{
+    &__spec-item{
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 25px;
+      letter-spacing: -0.02em;
+      max-width: 200px;
+    }
+  }
 }
