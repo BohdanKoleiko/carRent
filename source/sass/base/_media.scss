@@ -547,6 +547,16 @@
       align-items: unset;
     }
   }
+  .car{
+    &__item{
+      &[data-bs-target]{
+        &:hover{
+          border: 2px solid #3563E9;
+          padding: 4px;
+        }
+      }
+    }
+  }
   .about-car{
     padding: 20px;
     &__heading{
@@ -742,15 +752,32 @@
     padding-left: 31px;
   }
   /* Promo section of Main block */
+  .promo{
+    &__title-wrap{
+      padding: 20px 0 0 20px;
+    }
+    &__title{
+      font-size: 26px;
+      margin-bottom: 14px;
+    }
+    &__sub-title{
+      font-size: 14px;
+    }
+  }
   .car{
     &__carousel{
       height: 100%;
-      max-height: 360px;
+      max-height: 355px;
     }
     &__items{
       height: 124px;
     }
     &__item{
+      &[data-bs-target]{
+        &:hover{
+          padding: 8px;
+        }
+      }
       &[class*="active"]{
         padding: 8px; 
       }
@@ -892,6 +919,18 @@
     margin-bottom: 32px;
   }
   /* Promo section of Main block */
+  .promo{
+    &__title-wrap{
+      padding: 24px 0 0 24px;
+    }
+    &__title{
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+    &__sub-title{
+      font-size: 16px;
+    }
+  }
   .about-car{
     padding: 24px 24px 32px 24px;
     min-width: 376px;
@@ -899,8 +938,8 @@
       font-size: 32px;
       margin-bottom: 8px;
     }
-    &__rate{
-      margin-bottom: 32px;
+    &__rate, &__txt{
+      margin-bottom: calc(32px * 100% / 450px);
     }
     &__rate-items{
       svg{
@@ -913,11 +952,10 @@
       line-height: 18px;
     }
     &__txt{
-      font-size: 20px;
-      margin-bottom: 32px;
+      font-size: calc(58% + 0.7vw);
     }
     &__config{
-      margin-bottom: 68px;
+      margin-bottom: calc(68px * 100% / 450px);
     }
     &__price{
       font-size: 28px;
@@ -939,6 +977,15 @@
       line-height: 25px;
       letter-spacing: -0.02em;
       max-width: 200px;
+    }
+  }
+}
+
+@media screen and (min-width: 1441px){
+  /* Promo section of Main block */
+  .about-car{
+    &__txt{
+      font-size: 20px;
     }
   }
 }
