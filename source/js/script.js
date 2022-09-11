@@ -55,3 +55,14 @@ if(checkSwiper){
     },
   });
 }
+
+const customFeedback = document.querySelectorAll('.feedback__customer-feedback .feedback__txt p');
+
+for (let i = 0; i < customFeedback.length; i++){
+  //console.log(customFeedback[i]);
+  $clamp(customFeedback[i], {
+    clamp: 'auto', // Кількість рядків
+    useNativeClamp: true, // Використовуємо -webkit-line-clamp, чомусь без використання не працює
+    animate: true, // Для більш плавної анімаціїї
+  });
+}
