@@ -9,6 +9,9 @@
 # production
 /build
 
+# for deploy in gitpage
+/docs
+
 # misc
 .DS_Store
 .env.local
