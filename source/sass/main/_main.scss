@@ -1,0 +1,21 @@
+.main{
+  flex: 1 1 auto;
+  background: $bg_color;
+}
+
+.flex-container{
+  display: flex;
+}
+
+//.content{
+  //padding: 32px 0 32px 31px;
+  //max-width: 1048px;
+  //width: calc(100% - calc(348px * 100% / 1375px) + 20px);
+  //margin-left: auto;
+//}
+
+@import './aside/aside';
+@import './promo/promo';
+@import './feedback/feedback';
+@import './recent-rent/recent-rent';
+@import './recom-car/recom-car';

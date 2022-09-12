@@ -1,0 +1,82 @@
+.aside{
+  width: calc(348px * 100% / 1375px);
+  min-width: 272px;
+  padding-top: 32px;
+  padding-left: 20px;
+  margin-left: -20px;
+  background: $primary_color;
+}
+.form-container{
+  position: relative;
+  margin-bottom: 56px;
+  max-width: 296px;
+  margin-right: 20px;
+  &__caption{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 150%;
+    /* or 18px */
+    letter-spacing: 0.2em;
+    color: #94A7CB;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+  &__amount{
+    font-weight: 500;
+    color: #90A3BF;
+  }
+  &__progres{
+    position: absolute;
+    top: 52px;
+    left: 0;
+    height: 8px;
+    width: 0%;
+    background: #3563E9;
+    border-radius: 12px;
+    z-index: 1;
+  }
+}
+.form-check{
+  display: flex;
+  align-items: center;
+  padding: 0;
+  column-gap: calc(8px * 100% / 328px);
+  max-height: 24px;
+  .form-check-input{
+    float: none;
+    margin: 0;
+  }
+  &:not(:last-child){
+    margin-bottom: 32px;
+  }
+}
+.form-check-label, .form-label{
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  /* or 30px */
+  letter-spacing: -0.02em;
+  color: #3D5278;
+}
+.form-range::-webkit-slider-thumb:active{
+  box-shadow: none;
+}
+.form-range:focus::-webkit-slider-thumb{
+  box-shadow: none;
+}
+.form-range::-webkit-slider-thumb{
+  position: relative;
+  background: #3563E9;
+  border: 4px solid #FFFFFF;
+  height: 20px;
+  width: 20px;
+  margin-top: -6px;
+  z-index: 2;
+}
+.form-range::-webkit-slider-runnable-track{
+  background: #C3D4E9;
+}
+.form-range{
+  height: 20px;
+  margin-bottom: 12px;
+}

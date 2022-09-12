@@ -1,0 +1,219 @@
+.promo{
+  margin-bottom: 32px;
+  &__wrap{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: calc(32px * 100% / 1016px);
+  }
+  &__title-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  &__title{
+    font-weight: 600;
+    line-height: 120%;
+    /* or 38px */
+    letter-spacing: -0.01em;
+    color: $primary_color;
+    max-width: 372px;
+  }
+  &__sub-title{
+    font-weight: 500;
+    line-height: 160%;
+    /* or 26px */
+    letter-spacing: 0.02em;
+    color: $primary_color;
+    max-width: 284px;
+  }
+  
+}
+
+.car{
+  &__carousel{
+    height: 360px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  &__img-box{
+    height: 100%;
+    width: auto;
+    figure{
+      margin: 0 0 0 0;
+    }
+  }
+  &__intro{
+    position: relative;
+    background: #3563E9 url('../../../images/bg.png') 100% center/cover no-repeat;
+    width: 100%;
+    height: 100%;
+    img{
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(380px * 100% / 492px);
+      max-width: 380px;
+      height: auto;
+      max-height: 120px;
+      margin: 0 auto;
+    }
+  }
+  &__img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+  &__items{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    column-gap: calc(24px * 100% / 492px);
+
+    //It`s disable styles that come from bootstrap
+    position: static;
+    margin: 0;
+  }
+  &__item{
+    overflow: hidden;
+    img{
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    //It`s disable styles that come from bootstrap
+    &[data-bs-target]{
+      height: auto;
+      margin: 0;
+      text-indent: 0;
+      background: none;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      transition: all 0.4s ease-in-out;
+      box-sizing: border-box;
+      opacity: 1;
+    }
+    &[class*="active"]{
+      border: 2px solid #3563E9;
+    }
+  }
+  .carousel{
+    position: static;
+  }
+}
+
+.about-car{
+  background-color: $primary_color;
+  &__button{
+    --bs-btn-font-weight: 700;
+    --bs-btn-font-size: 16px;
+    --bs-btn-line-height: 20px;
+    --bs-btn-border-radius: 4px;
+  }
+  &__heading{
+    font-weight: 700;
+    line-height: 140%;
+    /* or 45px */
+    color: #1A202C;
+  }
+  &__rate{
+    display: flex;
+    max-height: 24px;
+    column-gap: calc(8px * 100% / 441px);
+  }
+  &__rate-items{
+    svg{
+      fill: none;
+      stroke: #C3D4E9;
+      &:not(:last-child){
+        fill: #FBAD39;
+        stroke: none;
+      }
+    }
+  }
+  &__num-reviews{
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: #3D5278;
+  }
+  &__favourite{
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
+  &__txt{
+    font-weight: 400;
+    line-height: 200%;
+    /* or 40px */
+    letter-spacing: -0.02em;
+    color: #3D5278;
+  }
+  //&__config{}
+  &__rent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__price{
+    font-weight: 700;
+    color: #1A202C;
+  }
+  &__price-sale, &__price span{
+    color: #90A3BF;
+  }
+  &__price-sale{
+    text-decoration: line-through;
+  }
+}
+
+.car, .about-car{
+  position: relative;
+  max-height: 508px;
+}
+
+.favourite{
+  cursor: pointer;
+  svg{
+    fill: #ED3F3F;
+    stroke: none;
+  }
+}
+
+.config{
+  &__spec{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &:not(:last-child){
+      margin-bottom: 16px;
+    }
+  }
+  &__spec-item{
+    flex: 1 1 auto;
+    color: #90A3BF;
+
+    display: flex;
+    justify-content: space-between;
+    span{
+      font-weight: 600;
+      color: #3D5278;
+      margin-left: 10px;
+    }
+    &:not(:last-child){
+      margin-right: 10px;
+    }
+  }
+}
+
+.car__carousel, .about-car{
+  border-radius: 10px;
+}

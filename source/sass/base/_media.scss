@@ -1,0 +1,991 @@
+@media screen and (min-width: 320px) {
+  [class*="__container"]{
+    max-width: 1395px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+
+  /* Header block */
+  .burger{
+    &__inner{
+      width: 25px;
+      height: 18px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    
+    order: 1;
+    span{
+      display: block;
+      width: 100%;
+      border: 1px solid #3D5278;
+      border-radius: 5px;
+
+      /* Fix white background appears in some browsers */
+      background: #3D5278;
+      &:nth-child(2){
+        margin: 6px 0;
+      }
+    }
+  }
+  .header{
+    &__wrap{
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 32px 0;
+      row-gap: 24px;
+    }
+    &__logo{
+      order: 3;
+      margin: 0;
+      width: 100%;
+      flex-shrink: 0;
+    }
+  }
+  .header__logo, .footer__logo{
+    max-width: 108px;
+  }
+  .form{
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    order: 4;
+
+    height: 48px;
+    min-width: 285px;
+    max-width: 420px;
+    margin: 0;
+    &__content, &__search-sett{
+      border: 1px solid rgba(195, 212, 233, 0.4);
+      border-radius: 10px;
+    }
+    &__content{
+      padding: 0 24px;
+      min-width: 200px;
+    }
+    &__search-fild{
+      margin: 0 0 0 8px;
+    }
+    &__search-sett{
+      flex: 0 0 48px;
+    }
+  }
+  .profil{
+    width: calc(100% - 25px);
+    order: 2;
+    &__favorite-list, &__notifications, &__settings{
+      display: none;
+    }
+  }
+
+
+  /* MAIN BLOCK */
+  .aside{
+    display: none;
+  }
+  .content{
+    width: 100%;
+    padding: 32px 0 32px 0;
+    overflow: hidden;
+  }
+  /* Promo section of Main block */
+  .promo{
+    &__wrap{
+      flex-direction: column;
+      align-items: center;
+      row-gap: 32px;
+    }
+    &__title-wrap{
+      padding: 16px 0 0 16px;
+    }
+    &__title{
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+    &__sub-title{
+      font-size: 12px;
+    }
+  }
+  .car{
+    width: 100%;
+    &__carousel{
+      height: 232px;
+    }
+    &__items{
+      height: 64px;
+    }
+    &__item{
+      &[data-bs-target]{
+        flex: 1 1 calc(100% / 3);
+      }
+      &[class*="active"]{
+        padding: 3px; 
+      }
+    }
+    &__intro{
+      img{
+        bottom: 20px;
+      }
+    }
+  }
+  .about-car{
+    padding: 16px;
+    min-width: 300px;
+    &__heading{
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+    &__rate, &__txt{
+      margin-bottom: 16px;
+    }
+    &__rate-items{
+      svg{
+        width: 12px;
+        height: 12px;
+      }
+    }
+    &__num-reviews{
+      font-size: 12px;
+      line-height: 15px;
+    }
+    &__txt{
+      font-size: 12px;
+    }
+    &__config{
+      margin-bottom: 32px;
+    }
+    &__price{
+      font-size: 20px;
+      line-height: 25px;
+      span{
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+    &__price-sale{
+      font-size: 12px;
+      line-height: 15px;
+      margin-top: 4px;
+    }
+    &__button{
+      --bs-btn-padding-y: 1rem;
+      --bs-btn-padding-x: 2rem;
+    }
+  }
+  .config{
+    &__spec-item{
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: -0.01em;
+      max-width: 124px;
+    }
+  }
+  /* Recent-rent and Recom-car sections of Main block */
+  .recent-rent, .recom-car{
+    max-width: 480px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    &__header{
+      margin: 0 0 20px;
+    }
+    &__caption{
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__more-products{
+      font-size: 12px;
+      line-height: 15px;
+    }
+    &__items{
+      flex-wrap: nowrap;
+      column-gap: 19px;
+    }
+    &__item{
+      padding: 16px;
+      max-width: 240px;
+    }
+    &__car-name{
+      font-size: 16px;
+      line-height: 20px;
+    }
+    &__car-type{
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      margin-bottom: 32px;
+    }
+    &__car-img{
+      height: 56px;
+      margin: 0 0 44px 0;
+    }
+    &__img-shadow{
+      bottom: -36px;
+    }
+    &__car-config{
+      margin-bottom: 28px;
+    }
+    &__car-price{
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: -0.01em;
+      span{
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+    &__btn{
+      --bs-btn-padding-y: 0.625rem;
+      --bs-btn-padding-x: 0.9375rem;
+      --bs-btn-font-size: 0.75rem;
+      --bs-btn-line-height: 0.9375rem;
+    }
+  }
+  .car-config{
+    &__gas, &__transmition, &__capacity{
+      font-size: 12px;
+      line-height: 15px;
+      column-gap: 4px;
+    }
+  }
+  .swiper{
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  /* Feedback section of Main block */
+  .feedback{
+    max-width: 480px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    &__wrap{
+      padding: 16px;
+    }
+    &__title-wrap{
+      margin-bottom: 24px;
+    }
+    &__customer-feedback{
+      margin-bottom: 20px;
+    }
+    &__heading-wrap{
+      margin-bottom: 16px;
+      column-gap: 8px;
+    }
+    &__client-img{
+      width: 44px;
+      height: auto;
+    }
+    &__client-name{
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: -0.01em;
+    }
+    &__client-position,  &__data{
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: -0.01em;
+    }
+    &__client-rate{
+      svg{
+        height: auto;
+        width: 12px;
+      }
+    }
+    &__txt{
+      padding-left: 52px;
+      p{
+        height: 50px;
+        font-size: 12px;
+      }
+    }
+  }
+
+
+  /* Footer block */
+  .footer{
+    background: $bg_color;
+    &__wrap{
+      flex-direction: column;
+      row-gap: 48px;
+      margin: 24px 0 48px 0;
+    }
+    &__goal-txt{
+      font-size: 12px;
+      max-width: 216px;
+    }
+    &__devider{
+      display: none;
+    }
+  }
+  .nav{
+    flex-wrap: wrap;
+    row-gap: 48px;
+    &__item{
+      font-size: 16px;
+    }
+    &__socials{
+      order: 2;
+    }
+    &__community{
+      order: 3;
+    }
+  }
+  .nav__item, .footer__goal-txt{
+    font-weight: 500;
+    color: #90A3BF;
+  }
+  .rights{
+    flex-wrap: wrap;
+    row-gap: 32px;
+    column-gap: 10px;
+    font-size: 12px;
+    margin-bottom: 24px;
+    &__right-res{order: 3; flex-grow: 0;}
+    &__priv-poli{order: 1;}
+    &__term-cond{order: 2;}
+  }
+}
+
+
+@media screen and (min-width: 425px) {
+  /* Header block */
+  .header{
+    &__logo{
+      width: auto;
+      margin-right: 10px;
+    }
+  }
+  .profil, .burger{
+    flex: 1 1 calc(100% / 2 - 20px);
+  }
+  .profil{
+    &__notifications{
+      display: block;
+    }
+  }
+
+
+  /* MAIN BLOCK */
+  /* Promo section of Main block */
+  .promo{
+    &__wrap{
+      column-gap: calc(20px * 100% / 1016px);
+    }
+    &__title-wrap{
+      padding: 16px 0 0 16px;
+    }
+    &__title{
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+    &__sub-title{
+      font-size: 12px;
+    }
+  }
+  .car{
+    &__carousel{
+      height: 280px;
+    }
+    &__items{
+      height: 64px;
+    }
+    &__item{
+      &[class*="active"]{
+        padding: 4px; 
+      }
+    }
+    &__intro{
+      img{
+        bottom: 20px;
+      }
+    }
+  }
+  .about-car, .car{
+    flex: 1 1 calc(100% / 2 - (calc(20px * 100% / 1016px)));
+    max-width: 480px;
+  }
+  /* Feedback section of Main block */
+  .feedback{
+    &__heading-wrap{
+      column-gap: 12px;
+    }
+    &__client-img{
+      width: 50px;
+    }
+    &__client-name{
+      letter-spacing: normal;
+    }
+    &__client-position,  &__data{
+      letter-spacing: normal;
+    }
+    &__client-rate{
+      svg{
+        height: auto;
+        width: 14px;
+      }
+    }
+    &__txt{
+      padding-left: 60px;
+      p{
+        height: 72px;
+        font-size: 12px;
+        overflow: hidden;
+      }
+    }
+  }
+  /* Recent-rent and Recom-car sections of Main block */
+  .recent-rent, .recom-car{
+    &__header{
+      margin: 0 10px 23px;
+    }
+    &__item{
+      padding: 18px;
+      max-width: 270px;
+    }
+    &__car-type{
+      margin-bottom: 40px;
+    }
+    &__car-img{
+      height: 65px;
+      margin: 0 0 46px 0;
+    }
+    &__car-config{
+      margin-bottom: 30px;
+    }
+    &__btn{
+      --bs-btn-padding-y: 0.640rem;
+      --bs-btn-padding-x: 0.9675rem;
+      --bs-btn-font-size: 0.80rem;
+      --bs-btn-line-height: 0.9675rem;
+    }
+  }
+
+
+  /* Footer block */
+  .nav{
+    &__socials{
+      order: 3;
+    }
+    &__community{
+      order: 2;
+    }
+  }
+  .rights{
+    margin-bottom: 40px;
+    font-size: 14px;
+    column-gap: 20px;
+    &__term-cond, &__priv-poli{flex-basis: calc(100% / 2 - 20px);}
+    &__term-cond{text-align: right;}
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  [class*="__container"]{
+    max-width: 1405px;
+    padding: 0 15px;
+  }
+
+  /* Header block */
+  .burger{
+    display: none;
+  }
+  .header{
+    &__wrap{
+      flex-wrap: nowrap;
+      row-gap: 0;
+      column-gap: calc(30px * 100% / 1376px);
+      margin: 40px 0 40px 28px;
+    }
+    &__logo{
+      order: 1;
+    }
+  }
+  .header__logo, .footer__logo{
+    max-width: 148px;
+  }
+  .form{
+    height: 44px;
+    max-width: 492px;
+    min-width: 320px;
+    border: 1px solid rgba(195, 212, 233, 0.4);
+    border-radius: 70px;
+    padding: 0 20px;
+
+    column-gap: 0;
+    order: 2;
+    &__content, &__search-sett{
+      border: none;
+      border-radius: 0;
+      padding: 0;
+    }
+    &__search-fild{
+      margin: 0 20px;
+    }
+    &__search-sett{
+      flex: 0 0 auto;
+    }
+  }
+  
+  .profil{
+    order: 3;
+    width: auto;
+    flex: 1 1 auto;
+    &__favorite-list, &__notifications, &__settings{
+      display: block;
+    }
+  }
+
+  /* MAIN BLOCK */
+  /* Promo section of Main block */
+  .promo{
+    &__wrap{
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: unset;
+    }
+  }
+  .car{
+    &__item{
+      &[data-bs-target]{
+        &:hover{
+          border: 2px solid #3563E9;
+          padding: 4px;
+        }
+      }
+    }
+  }
+  .about-car{
+    padding: 20px;
+    &__heading{
+      font-size: 24px;
+    }
+    &__rate, &__txt{
+      margin-bottom: 20px;
+    }
+    &__rate-items{
+      svg{
+        width: 16px;
+        height: 16px;
+      }
+    }
+    &__num-reviews{
+      font-size: 12px;
+      line-height: 15px;
+    }
+    &__txt{
+      font-size: 14px;
+    }
+    &__config{
+      margin-bottom: 42px;
+    }
+    &__price{
+      font-size: 22px;
+      line-height: 28px;
+      span{
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+    &__price-sale{
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+  .config{
+    &__spec-item{
+      font-size: 14px;
+      letter-spacing: -0.02em;
+      max-width: 135px;
+    }
+  }
+  /* Feedback section of Main block */
+  .feedback{
+    max-width: 100%;
+    &__wrap{
+      padding: 20px;
+    }
+    &__title-wrap{
+      margin-bottom: 28px;
+    }
+    &__heading-wrap{
+      margin-bottom: 12px;
+      column-gap: 16px;
+    }
+    &__client-img{
+      width: 56px;
+    }
+    &__client-name{
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 25px;
+      letter-spacing: normal;
+    }
+    &__client-position,  &__data{
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: normal;
+    }
+    &__client-rate{
+      svg{
+        height: auto;
+        width: 20px;
+      }
+    }
+    &__txt{
+      padding-left: 72px;
+      p{
+        height: 100%;
+        font-size: 14px;
+        overflow: hidden;
+      }
+    }
+  }
+  /* Recent-rent and Recom-car sections of Main block */
+  .recent-rent, .recom-car{
+    max-width: 100%;
+    &__header{
+      margin: 0 15px 23px;
+    }
+    &__items{
+      flex-wrap: wrap;
+      column-gap: calc(25px * 100% / 1016px);
+      row-gap: 25px;
+    }
+    &__item{
+      padding: 20px;
+      max-width: 314px;
+      flex: 1 1 calc(100% / 3 - (calc(25px * 100% / 1016px)));
+    }
+    &__car-name{
+      font-size: 18px;
+      line-height: 23px;
+    }
+    &__car-type{
+      font-weight: 600;
+      line-height: 16px;
+      margin-bottom: 45px;
+    }
+    &__car-img{
+      height: 70px;
+      margin: 0 0 48px 0;
+    }
+    &__img-shadow{
+      bottom: -22px;
+    }
+    &__car-config{
+      margin-bottom: 33px;
+    }
+  }
+  .car-config{
+    &__gas, &__transmition, &__capacity{
+      column-gap: 0px;
+    }
+  }
+  .swiper{
+    border-radius: 0;
+  }
+
+  /* Footer block */
+  .footer{
+    background-color: $primary_color;
+    &__wrap{
+      flex-direction: row;
+      row-gap: 0;
+      margin: 80px 28px 60px;
+    }
+    &__goal-txt{
+      font-size: 16px;
+      max-width: 292px;
+    }
+    &__devider{
+      display: block;
+      margin: 0 28px 48px 28px;
+    }
+  }
+  .footer__goal-txt, .nav__item{
+    color: #13131399;
+  }
+  .rights{
+    flex-wrap: nowrap;
+    column-gap: 60px;
+    font-size: 16px;
+    margin-left: 28px;
+    margin-right: 28px;
+    &__right-res{order: 1; flex-grow: 1;}
+    &__priv-poli{order: 2;}
+    &__term-cond{order: 3;}
+    &__term-cond, &__priv-poli{flex-basis: auto;}
+    &__term-cond{text-align: left;}
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  [class*="__container"]{
+    max-width: 1415px;
+    padding: 0 20px;
+  }
+
+  /* Header block */
+  .header{
+    &__wrap{
+      column-gap: calc(64px * 100% / 1376px);
+    }
+  }
+
+  /* MAIN BLOCK */
+  .aside{
+    min-width: 250px;
+    display: block
+  }
+  .form-check-label{
+    font-size: 18px;
+  }
+  .form-check:not(:last-child){
+    margin-bottom: 26px;
+  }
+  .content{
+    width: calc(100% - calc(348px * 100% / 1375px) + 20px);
+    padding-left: calc(32px * 100% / 1375px);
+  }
+  /* Promo section of Main block */
+  .promo{
+    &__title-wrap{
+      padding: 20px 0 0 20px;
+    }
+    &__title{
+      font-size: 26px;
+      margin-bottom: 14px;
+    }
+    &__sub-title{
+      font-size: 14px;
+    }
+  }
+  .car{
+    &__carousel{
+      height: 100%;
+      max-height: 355px;
+    }
+    &__items{
+      height: 124px;
+    }
+    &__item{
+      &[data-bs-target]{
+        &:hover{
+          padding: 8px;
+        }
+      }
+      &[class*="active"]{
+        padding: 8px; 
+      }
+    }
+  }
+  .car, .about-car{
+    flex: 1 1 calc(100% / 2 - 32px);
+    max-width: 800px;
+  }
+  .about-car{
+    padding: 20px 20px 32px 20px;
+    min-width: 350px;
+    &__heading{
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+    &__rate, &__txt{
+      margin-bottom: 28px;
+    }
+    &__rate-items{
+      svg{
+        width: 20px;
+        height: 20px;
+      }
+    }
+    &__num-reviews{
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__txt{
+      font-size: 18px;
+    }
+    &__config{
+      margin-bottom: 68px;
+    }
+    &__price{
+      font-size: 28px;
+      line-height: 35px;
+    }
+    &__price-sale, &__price span{
+      font-size: 16px;
+      line-height: 20px;
+    }
+    &__button{
+      --bs-btn-padding-y: 0.938rem;
+      --bs-btn-padding-x: 2.05rem;
+    }
+  }
+  .config{
+    &__gas, &__transmition, &__capacity{
+      column-gap: 4px;
+    }
+    &__spec-item{
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: -0.02em;
+      max-width: 148px;
+    }
+  }
+  /* Recent-rent and Recom-car sections of Main block */
+  .recent-rent, .recom-car{
+    &__header{
+      margin: 0 20px 26px;
+    }
+    &__caption, &__more-products{
+      font-size: 16px;
+      line-height: 20px;
+    }
+    &__items{
+      column-gap: calc(32px * 100% / 1016px);
+      row-gap: 32px;
+    }
+    &__item{
+      padding: 24px;
+      max-width: 317px;
+      min-width: 281px;
+      &:hover{
+        transform: scale(1.02);
+      }
+    }
+    &__car-name{
+      font-size: 20px;
+      line-height: 25px;
+    }
+    &__car-type{
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 52px;
+    }
+    &__car-img{
+      height: 84px;
+      margin: 0 0 52px 0;
+    }
+    &__img-shadow{
+      bottom: -24px;
+    }
+    &__car-config{
+      margin-bottom: 36px;
+    }
+    &__car-price{
+      font-size: 20px;
+      line-height: 25px;
+      span{
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+    &__btn{
+      --bs-btn-padding-y: 0.688rem;
+      --bs-btn-padding-x: 1.243rem;
+      --bs-btn-font-size: 1rem;
+      --bs-btn-line-height: 1.25rem;
+    }
+  }
+  .car-config{
+    &__gas, &__transmition, &__capacity{
+      font-size: 14px;
+      line-height: 18px;
+      column-gap: 8px;
+    }
+  }
+  .swiper{
+    overflow: visible;
+  }
+
+  /* Footer block */
+  .rights{
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* MAIN BLOCK */
+  .form-check-label{
+    font-size: 20px;
+  }
+  .form-check:not(:last-child){
+    margin-bottom: 32px;
+  }
+  /* Promo section of Main block */
+  .promo{
+    &__title-wrap{
+      padding: 24px 0 0 24px;
+    }
+    &__title{
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+    &__sub-title{
+      font-size: 16px;
+    }
+  }
+  .about-car{
+    padding: 24px 24px 32px 24px;
+    min-width: 376px;
+    &__heading{
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+    &__rate, &__txt{
+      margin-bottom: calc(32px * 100% / 450px);
+    }
+    &__rate-items{
+      svg{
+        width: 20px;
+        height: 20px;
+      }
+    }
+    &__num-reviews{
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__txt{
+      font-size: calc(58% + 0.7vw);
+    }
+    &__config{
+      margin-bottom: calc(68px * 100% / 450px);
+    }
+    &__price{
+      font-size: 28px;
+      line-height: 35px;
+    }
+    &__price-sale, &__price span{
+      font-size: 16px;
+      line-height: 20px;
+    }
+    &__button{
+      --bs-btn-padding-y: 0.938rem;
+      --bs-btn-padding-x: 2.05rem;
+    }
+  }
+  .config{
+    &__spec-item{
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 25px;
+      letter-spacing: -0.02em;
+      max-width: 200px;
+    }
+  }
+}
+
+@media screen and (min-width: 1441px){
+  /* Promo section of Main block */
+  .about-car{
+    &__txt{
+      font-size: 20px;
+    }
+  }
+}
